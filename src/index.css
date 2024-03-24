@@ -116,9 +116,7 @@ html {
 }
 
 body {
-    color: rgb(241, 241, 241);
     line-height: 1;
-    background-image: linear-gradient(to bottom, #3b007e, #8b21b4);
 }
 
 ol,
@@ -156,4 +154,10 @@ table {
 hr {
     margin: 30px 0;
     width: 100%;
+}
+
+body {
+
+    color: rgb(241, 241, 241);
+    background-image: linear-gradient(to bottom, #3b007e, #8b21b4);
 }
