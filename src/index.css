@@ -112,11 +112,13 @@ section {
 }
 
 html {
-    font-family: 'SF Pro';
+    font-family: 'SF Pro', 'Helvetica';
 }
 
 body {
+    color: rgb(241, 241, 241);
     line-height: 1;
+    background-image: linear-gradient(to bottom, #3b007e, #8b21b4);
 }
 
 ol,
@@ -150,3 +152,8 @@ table {
 }
 
 /* RESET END */
+
+hr {
+    margin: 30px 0;
+    width: 100%;
+}

@@ -5,13 +5,13 @@ import Navbar from "./layout/navbar/navbar";
 function App() {
   return (
     <div id="app">
-      <header>
+      <header className="header">
         <Navbar></Navbar>
       </header>
-      <main>
+      <main className="main">
         <Landing></Landing>
       </main>
-      <footer></footer>
+      <footer className="footer"></footer>
     </div>
   );
 }
