@@ -1,4 +1,76 @@
-nav {
+:root {
+    --nav-color: rgba(204, 250, 255, 0.4);
+}
+
+.nav {
     display: flex;
-    flex-dire
+    align-items: center;
+    background-color: var(--nav-color);
+    padding: 10px;
+    position: sticky;
+}
+
+.nav-title {
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    z-index: 2;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+.nav a {}
+
+.navbar-toggle {
+    background: none;
+    border: none;
+    margin-left: auto;
+    display: none;
+    z-index: 3;
+
+}
+
+
+
+
+.navbar-toggle:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .nav-inactive {
+        display: none;
+    }
+
+    .nav-active {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: inherit;
+    }
+
+
+
+    .nav .nav-links li {
+        font-size: 3.5rem;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
 }

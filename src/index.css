@@ -3,8 +3,6 @@
    License: none (public domain)
 */
 
-
-
 * {
     box-sizing: border-box;
 }
@@ -126,6 +124,13 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 blockquote,
 q {
     quotes: none;
@@ -143,3 +148,5 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+/* RESET END */

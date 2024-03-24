@@ -1,6 +1,6 @@
 .landing {
     display: grid;
     place-items: center;
-    background-color: black;
+    background-image: linear-gradient(to bottom, #FFFBF5, #FFFFFF);
     min-height: 100vh;
 }
