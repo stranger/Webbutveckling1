@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     padding-top: 10px;
-
 }
 
 .intro-section {
@@ -58,23 +57,133 @@
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: max(300px, 25vh);
+
 }
 
 .post-figure {
-    flex: 0 1 max(300px, 40vw);
-
+    flex: 0 1 max(300px, 30vw);
 }
 
 .post-figure img {
     width: 100%;
 }
 
+.post-figure figcaption {
+    color: silver;
+    font-size: 0.7rem;
+
+}
+
 .post-text {
+    height: 100%;
+    overflow: scroll;
     text-align: center;
-    flex: 0 1 max(300px, 40vw);
-    min-width: 200px;
+    flex: 0 1 max(350px, 50vw);
 }
 
 .post-text h1 {
-    font-size: max(1.5rem, 2vw);
+    font-size: max(1rem, 3vw);
+    word-wrap: break-word;
+}
+
+.show-comments-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.show-comments-btn svg {
+    width: max(50px, 4vw);
+    height: max(50px, 4vw);
+}
+
+.comment-number {
+    color: white;
+    position: absolute;
+    font-size: max(1rem, 1vw);
+}
+
+.comment-container {
+    background-image: linear-gradient(to bottom, rgb(31, 31, 31), rgb(22, 21, 21));
+    height: max(300px, 80vh);
+    width: max(150px, 70vw);
+    position: fixed;
+    top: 10%;
+    border-radius: 1%;
+    padding: 10px 10px 0 10px;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.comments {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.username {
+    font-size: max(1.2rem, 3vw);
+}
+
+.comment-container hr {
+    margin: 10px 0;
+}
+
+.comment-text {
+    font-size: max(1rem, 2vw);
+}
+
+.close-comments-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    font-size: max(3rem, 3vw);
+    background: none;
+    color: rgb(167, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+
+
+.comment-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: auto;
+}
+
+
+.comment-form fieldset {
+    flex: 1;
+}
+
+
+.comment-form legend {
+    font-size: max(1rem, 1vw);
+}
+
+.name-input {
+    height: 50px;
+    width: 100%;
+}
+
+.comment-input {
+    height: 100px;
+    width: 100%;
+    resize: none;
+}
+
+.comment-submit-btn {
+    flex: 0 0 max(60px, 10%);
+    background: none;
+    border: none;
 }

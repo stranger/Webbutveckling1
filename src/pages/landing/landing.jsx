@@ -1,23 +1,70 @@
 import "./Landing.css";
 
-import { Lens, Webbutveckling } from "../../assets/icons";
-import websiteImage from "./../../assets/website.png";
+import { useState } from "react";
 
-function BlogPost(...props) {
+import {
+  Lens,
+  Webbutveckling,
+  CommentIcon,
+  AddCommentIcon,
+} from "../../assets/icons";
+
+import blogData from "./../../assets/blogData.json";
+
+function BlogPost(props) {
+  const [clicked, setClick] = useState(false);
+
   return (
     <article className="post-container">
       <figure className="post-figure">
-        <img src={websiteImage} alt=""></img>
-        <figcaption></figcaption>
+        <img src={props.blogData.image} alt="Bild på delmoment uppgift"></img>
+        <figcaption>{props.blogData.description}</figcaption>
       </figure>
       <div className="post-text">
-        <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-          voluptas numquam explicabo amet non veritatis totam, quod voluptatum
-          cumque. Ducimus perferendis nulla totam saepe ut voluptatibus.
-          Adipisci nesciunt quas dolorem?
-        </h1>
+        <h1>{props.blogData.text}</h1>
       </div>
+      <button
+        onClick={() => setClick(!clicked)}
+        className="show-comments-btn"
+        type="button"
+      >
+        <CommentIcon />
+        <p className="comment-number">{props.blogData.comments.length}</p>
+      </button>
+      <aside
+        className="comment-container"
+        style={{ display: clicked ? "flex" : "none" }}
+      >
+        <button
+          onClick={() => setClick(!clicked)}
+          className="close-comments-btn"
+          type="button"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div className="comments">
+          {props.blogData.comments.map((comment, key) => {
+            return (
+              <div key={key} className="comment">
+                <h1 className="username">{comment.user}:</h1>
+                <p className="comment-text">{comment.text}</p>
+                <hr />
+              </div>
+            );
+          })}{" "}
+        </div>
+        <form className="comment-form">
+          <fieldset>
+            <legend>Namn:</legend>
+            <input className="name-input" type="text"></input>
+            <legend>Kommentar:</legend>
+            <textarea className="comment-input" type="text"></textarea>
+          </fieldset>
+          <button className="comment-submit-btn" type="button">
+            <AddCommentIcon />
+          </button>
+        </form>
+      </aside>
     </article>
   );
 }
@@ -25,7 +72,7 @@ function BlogPost(...props) {
 export default function Landing() {
   return (
     <div className="landing">
-      <section className="intro-section">
+      <section className="intro-section" id="intro">
         <div className="intro-text-container">
           <h1 className="intro-title">WEBBUTVECKLING 1</h1>
           <h2>
@@ -41,7 +88,15 @@ export default function Landing() {
       <section className="blog-section">
         <h3 className="blog-title">BLOGGEN</h3>
 
-        <BlogPost className="blog-post"></BlogPost>
+        {blogData.posts.map((data, key) => {
+          return (
+            <BlogPost
+              key={key}
+              className="blog-post"
+              blogData={data}
+            ></BlogPost>
+          );
+        })}
       </section>
     </div>
   );

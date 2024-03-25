@@ -11,9 +11,10 @@
 
 .nav-title {
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: max(1.5rem, 3vw);
     letter-spacing: 2px;
     white-space: nowrap;
+    overflow: hidden;
 }
 
 .nav-links {
@@ -23,8 +24,8 @@
 }
 
 .nav-links li {
-    margin: 0 10px;
-    font-size: 1.2rem;
+    margin: 0 1vw;
+    font-size: max(1.2rem, 2vw);
 }
 
 .nav a {}
