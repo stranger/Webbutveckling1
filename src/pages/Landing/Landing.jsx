@@ -1,5 +1,7 @@
 import "./Landing.css";
 
+import { Fade } from "react-awesome-reveal";
+
 import { IntroLogo } from "../../assets/icons";
 
 import BlogPost from "./../../components/BlogPost/BlogPost";
@@ -25,15 +27,17 @@ export default function Landing() {
       <section className="blog-section" id="blog">
         <h3 className="blog-title">BLOGGEN</h3>
         {/* Itererar över posts arrayen. Data är objekten i arrayen, key är index som react behöver för att hålla koll på vilket element är vad så att den kan re-rendera bara den komponenten istället för alla blog posts */}
-        {blogData.posts.map((data, key) => {
-          return (
-            <BlogPost
-              key={key}
-              blogData={data}
-              className="blog-post"
-            ></BlogPost>
-          );
-        })}
+        <Fade className="fade" cascade triggerOnce damping={0.01}>
+          {blogData.posts.map((data, key) => {
+            return (
+              <BlogPost
+                key={key}
+                blogData={data}
+                className="blog-post"
+              ></BlogPost>
+            );
+          })}
+        </Fade>
       </section>
     </div>
   );

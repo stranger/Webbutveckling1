@@ -7,7 +7,7 @@ header {
     right: 10px;
     top: 5px;
     /* Navbar över allting annat */
-    z-index: 99;
+    z-index: 10;
 }
 
 .nav {

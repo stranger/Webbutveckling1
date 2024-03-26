@@ -1,26 +1,27 @@
 .post-container {
     display: flex;
-
     justify-content: space-evenly;
     flex-wrap: wrap;
-    /* relativ position för alla absoluta element så dom är positionerade relativt till den här istället för nått annat ovanför */
+    /* Positioneringsankare */
     position: relative;
-    width: 100%;
+    width: 100vw;
     margin-bottom: 15vh;
+
 }
 
 
 .post-figure {
     /* sätter flex-basis ha storlek 40 viewport width, minimum 300px när 40vw är <300px tills väggarna krymper den */
-    flex: 0 1 max(300px, 40vw);
+    flex: 0 1 max(350px, 40vw);
     margin-bottom: 10px;
+
 }
 
 .post-figure div {
     /* 
     Den här idén jag hade med overflow skroll är inte en sån bra idé ganska jobbigt att skrolla genom sidan, men eh ändå kul att testa
     */
-    max-height: max(250px, 60vh);
+    max-height: max(250px, 50vh);
     /* skrolla bilden när den är större än 30vh */
     overflow-y: scroll;
 }
@@ -36,7 +37,7 @@
 
 .post-text {
     max-height: 60vh;
-    flex: 0 1 max(400px, 50vw);
+    flex: 0 1 max(500px, 50vw);
     margin-left: 10px;
     overflow-y: scroll;
 }
@@ -71,109 +72,4 @@
     color: white;
     position: absolute;
     font-size: max(1rem, 1vw);
-}
-
-.comment-container {
-    /* Skapar en gradient. background-color har ingen gradient, så använder background-image */
-    background-image: linear-gradient(to bottom, rgb(31, 31, 31), rgb(22, 21, 21));
-    height: 80vh;
-    width: max(100px, 70vw);
-    /* inte bara för att stanna, absolute positionerar relativt till positionerad förälder, det gör inte fixed den går till roten */
-    position: fixed;
-    top: 10%;
-    border-radius: 1%;
-    padding: 10px 10px 0 10px;
-    flex-direction: column;
-    z-index: 99999;
-    overflow: hidden;
-}
-
-.close-comments-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: none;
-    background: none;
-    color: rgb(167, 0, 0);
-    margin: 0;
-    padding: 0;
-}
-
-.close-comments-btn span {
-    font-size: max(3rem, 5vw);
-
-}
-
-.comments-title {
-    text-align: center;
-
-}
-
-.comments-title h1 {
-    font-size: max(1rem, 3vw);
-}
-
-
-.comments-title-icon {
-    width: max(50px, 10vh);
-    height: max(50px, 7vh);
-}
-
-
-.comments {
-    height: 100%;
-    overflow-y: scroll;
-}
-
-.comment-username {
-    font-weight: 200;
-    font-size: max(0.8rem, 2vw);
-}
-
-.comment-text {
-    font-size: max(1rem, 2.5vw);
-    word-break: break-all;
-}
-
-.comment-container hr {
-    margin: 10px 0;
-}
-
-
-.comment-form {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* margin-top fungerar pga förälder är flex */
-    margin-top: auto;
-    background-color: transparent;
-}
-
-
-.comment-form fieldset {}
-
-
-.comment-form label {
-    font-size: max(0.5rem, 2vw);
-}
-
-.name-input {
-
-    height: 5vh;
-    width: 100%;
-    font-size: max(0.6rem, 2vw);
-}
-
-.comment-input {
-    height: 10vh;
-    width: 100%;
-    resize: none;
-    font-size: max(0.6rem, 2vw);
-}
-
-.comment-submit-btn {
-    flex: 0 0 max(40px, 10%);
-    background: none;
-    border: none;
-    padding: 0;
 }

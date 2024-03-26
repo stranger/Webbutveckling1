@@ -151,7 +151,9 @@ table {
 
 /* RESET END */
 
-
+.react-reveal {
+    animation-fill-mode: backwards !important;
+}
 
 body {
     /* min-height istället för height så den kan bli större utan overflow osv */
