@@ -8,7 +8,7 @@ export default function Navbar() {
   const [clicked, setClick] = useState(false);
 
   return (
-    <header>
+    <header className="header">
       <nav className="nav">
         <h1 className="nav-title">WLOGG</h1>
         <ul className={`nav-links ${clicked ? "nav-active" : "nav-inactive"}`}>

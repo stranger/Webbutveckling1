@@ -159,8 +159,7 @@ body {
     /* min-height istället för height så den kan bli större utan overflow osv */
     min-height: 100%;
     /* allt utom botten för footer */
-    padding: 10px 10px 0 10px;
-
+    padding: 1vw 1vw 0 1vw;
     color: rgb(241, 241, 241);
     /* förklarat redan */
     background-image: linear-gradient(to bottom, #3b007e, #8b21b4);

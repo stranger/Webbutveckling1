@@ -1,18 +1,18 @@
-/* mesta förklarat i Landing/BlogPost */
+/* mesta kommenterat i Landing/BlogPost */
 
-header {
+.header {
     /* Stannar alltid med skroll och påverkar inga andra element */
     position: fixed;
-    left: 10px;
-    right: 10px;
-    top: 5px;
-    /* Navbar över allting annat */
+    /* body padding får den annars att overflowa */
+    width: 98vw;
+    /* Navbar över allt annat förutom comments (11)*/
     z-index: 10;
 }
 
 .nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .nav-title {
@@ -25,14 +25,15 @@ header {
 }
 
 .nav-links {
-    display: flex;
+
     /* tar bort ul punkter */
     list-style: none;
-    margin-left: auto;
+
 }
 
 .nav-links li {
     margin-left: 1vw;
+    display: inline-block;
     font-size: max(1.2rem, 2vw);
 }
 
@@ -54,7 +55,6 @@ header {
     När fönstret är <=500px width, och nav menyn är klickad,
     sätter den in .nav-active i ul som ändrar till full skärm. När den klickas bort
     så sätts nav-inactive in och gömmer den. Om skärmen ändras till >500px så påverkas inget.
-    Kanske kunde gjort på något annat sätt men när jag testa mig fram funka det här bäst.
     */
     .nav-inactive {
         display: none;

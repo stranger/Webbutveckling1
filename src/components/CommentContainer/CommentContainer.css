@@ -1,28 +1,23 @@
-.comment-real-container {
+.comments-main {
     display: none;
     justify-content: center;
     position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
     height: 100vh;
     width: 100vw;
     z-index: 9999999;
 }
 
 .backdrop {
-    content: '';
     position: fixed;
-    /* gå över body padding/margin dålig idé?*/
-    height: 150vh;
-    width: 150vw;
+    height: 100vh;
+    width: 100vw;
     top: 0;
     background-color: rgba(82, 0, 177, 0.705);
     z-index: 11;
 }
 
 
-.comment-container {
+.comments-container {
     /* Skapar en gradient. background-color har ingen gradient, så använder background-image */
     background-image: linear-gradient(to bottom, rgb(31, 31, 31), rgb(22, 21, 21));
     height: 80vh;
@@ -86,7 +81,7 @@
     word-break: break-all;
 }
 
-.comment-container hr {
+.comments-container hr {
     margin: 10px 0;
 }
 

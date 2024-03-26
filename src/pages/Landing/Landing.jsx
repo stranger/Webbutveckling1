@@ -26,8 +26,9 @@ export default function Landing() {
 
       <section className="blog-section" id="blog">
         <h3 className="blog-title">BLOGGEN</h3>
-        {/* Itererar över posts arrayen. Data är objekten i arrayen, key är index som react behöver för att hålla koll på vilket element är vad så att den kan re-rendera bara den komponenten istället för alla blog posts */}
+        {/* Fadar in när den visas i viewport med awesome-reveal */}
         <Fade className="fade" cascade triggerOnce damping={0.01}>
+          {/* Itererar över posts arrayen. Data är objekten i arrayen, key är index som react behöver för att hålla koll på vilket element är vad så att den kan re-rendera bara den komponenten istället för alla blog posts */}
           {blogData.posts.map((data, key) => {
             return (
               <BlogPost

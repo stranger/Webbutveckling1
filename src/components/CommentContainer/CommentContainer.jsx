@@ -5,7 +5,7 @@ import { useState } from "react";
 import { AddCommentIcon, CommentsIcon } from "../../assets/icons";
 
 export default function CommentContainer(props) {
-  /*Viktigt för inputs så att de blir controlled components (react kan hålla koll) utan så kan inte react hålla koll på values i realtid */
+  /* Viktigt för inputs så att de blir controlled components utan så kan inte react hålla koll på values i realtid och kan manipuleras med reacts metoder istället för js DOM */
   const [inputName, setName] = useState("");
   const [inputComment, setComment] = useState("");
 
@@ -21,7 +21,7 @@ export default function CommentContainer(props) {
 
   return (
     <aside
-      className="comment-real-container"
+      className="comments-main"
       style={{ display: props.clicked ? "flex" : "none" }}
     >
       <div
@@ -31,7 +31,7 @@ export default function CommentContainer(props) {
       ></div>
 
       <section
-        className="comment-container"
+        className="comments-container"
         /* gömmer för screen readers när den inte finns */
         aria-hidden={!props.clicked}
       >
