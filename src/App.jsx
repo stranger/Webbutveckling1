@@ -1,17 +1,16 @@
 import "./App.css";
 import Landing from "./pages/Landing/Landing";
 import Navbar from "./layout/Navbar/Navbar";
+import Footer from "./layout/Footer/Footer";
 
 function App() {
   return (
     <div id="app">
-      <header className="header">
-        <Navbar></Navbar>
-      </header>
-      <main className="main">
+      <Navbar></Navbar>
+      <main>
         <Landing></Landing>
       </main>
-      <footer className="footer"></footer>
+      <Footer></Footer>
     </div>
   );
 }

@@ -152,18 +152,18 @@ table {
 /* RESET END */
 
 
+
 body {
+    /* min-height istället för height så den kan bli större utan overflow osv */
     min-height: 100%;
-    padding: 10px;
+    /* allt utom botten för footer */
+    padding: 10px 10px 0 10px;
+
     color: rgb(241, 241, 241);
+    /* förklarat redan */
     background-image: linear-gradient(to bottom, #3b007e, #8b21b4);
 }
 
 button:hover {
     cursor: pointer;
-}
-
-hr {
-    margin: 30px 0;
-    width: 100%;
 }

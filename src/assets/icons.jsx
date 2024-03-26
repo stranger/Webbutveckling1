@@ -20,7 +20,7 @@ const Lens = ({ ...props }) => (
   ></div>
 );
 
-const Webbutveckling = (props) => (
+const IntroLogo = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
@@ -1757,4 +1757,4 @@ const AddCommentIcon = (props) => (
   </svg>
 );
 
-export { Burger, Lens, Webbutveckling, CommentIcon, AddCommentIcon };
+export { Burger, Lens, IntroLogo, CommentIcon, AddCommentIcon };
