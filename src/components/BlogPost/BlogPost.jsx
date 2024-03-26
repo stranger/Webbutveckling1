@@ -1,7 +1,11 @@
 import "./BlogPost.css";
 import { useState } from "react";
 
-import { CommentIcon, AddCommentIcon } from "../../assets/icons";
+import {
+  ShowCommentsIcon,
+  AddCommentIcon,
+  CommentsIcon,
+} from "../../assets/icons";
 
 /* props tar alla attributes jag skrev in i elmentet så blogData= {data} = props */
 export default function BlogPost(props) {
@@ -21,6 +25,8 @@ export default function BlogPost(props) {
       const comment = { user: inputName, text: inputComment };
       /* Spread operator så jag får alla values inuti arrayen istället för att bara sätta in en array */
       setBlogComments((oldState) => [...oldState, comment]);
+      setName("");
+      setComment("");
     }
   };
 
@@ -34,17 +40,18 @@ export default function BlogPost(props) {
         <figcaption>{props.blogData.description}</figcaption>
       </figure>
 
-      <div className="post-text">
+      <section className="post-text">
         <h1>{props.blogData.text}</h1>
-      </div>
+      </section>
 
       {/* viktigt att passa fuktionen istället för att calla den, om jag skrev utan arrow funktionen skulle den executa direkt när komponenten laddas in  */}
       <button
         onClick={() => setClick(!clicked)}
         className="show-comments-btn"
         type="button"
+        aria-label="Visa kommentarer"
       >
-        <CommentIcon />
+        <ShowCommentsIcon />
         <p className="comment-number">{blogComments.length}</p>
       </button>
 
@@ -59,22 +66,30 @@ export default function BlogPost(props) {
           onClick={() => setClick(!clicked)}
           className="close-comments-btn"
           type="button"
+          aria-label="Dölj kommentarer"
         >
           <span aria-hidden="true">&times;</span>
         </button>
 
-        <div className="comments">
+        <section className="comments-title">
+          <CommentsIcon className="comments-title-icon" />
+          <h1>{props.blogData.description} kommentarer</h1>
+        </section>
+
+        <hr />
+
+        <section className="comments">
           {/* Förklarad i Landing.jsx */}
           {blogComments.map((comment, key) => {
             return (
               <div key={key} className="comment">
-                <h1 className="username">{comment.user}:</h1>
+                <h1 className="comment-username">{comment.user}:</h1>
                 <p className="comment-text">{comment.text}</p>
                 <hr />
               </div>
             );
           })}
-        </div>
+        </section>
 
         <form className="comment-form">
           <fieldset>
@@ -105,6 +120,7 @@ export default function BlogPost(props) {
             onClick={() => addComment()}
             className="comment-submit-btn"
             type="button"
+            aria-label="Skicka kommentar"
           >
             <AddCommentIcon />
           </button>
