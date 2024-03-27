@@ -5,7 +5,7 @@ import { useState } from "react";
 import { AddCommentIcon, CommentsIcon } from "../../assets/icons";
 
 export default function CommentContainer(props) {
-  /* Viktigt för inputs så att de blir controlled components utan så kan inte react hålla koll på values i realtid och kan manipuleras med reacts metoder istället för js DOM */
+  /* Viktigt för inputs så att de blir controlled components utan så kan inte react hålla koll på values i realtid och nu kan manipuleras med reacts metoder istället för js DOM */
   const [inputName, setName] = useState("");
   const [inputComment, setComment] = useState("");
 
@@ -23,6 +23,8 @@ export default function CommentContainer(props) {
     <aside
       className="comments-main"
       style={{ display: props.clicked ? "flex" : "none" }}
+      /* gömmer för screen readers när den inte finns */
+      aria-hidden={!props.clicked}
     >
       <div
         className="backdrop"
@@ -30,11 +32,12 @@ export default function CommentContainer(props) {
         aria-hidden
       ></div>
 
-      <section
-        className="comments-container"
-        /* gömmer för screen readers när den inte finns */
-        aria-hidden={!props.clicked}
-      >
+      <section className="comments-container">
+        <section className="comments-title">
+          <CommentsIcon className="comments-title-icon" />
+          <h1>{props.description} kommentarer</h1>
+        </section>
+
         <button
           onClick={() => props.setClick(!props.clicked)}
           className="close-comments-btn"
@@ -44,15 +47,10 @@ export default function CommentContainer(props) {
           <span aria-hidden="true">&times;</span>
         </button>
 
-        <section className="comments-title">
-          <CommentsIcon className="comments-title-icon" />
-          <h1>{props.description} kommentarer</h1>
-        </section>
-
         <hr />
 
         <section className="comments">
-          {/* Förklarad i Landing.jsx */}
+          {/* Map förklarad i Landing.jsx */}
           {props.blogComments.map((comment, key) => {
             return (
               <div key={key} className="comment">

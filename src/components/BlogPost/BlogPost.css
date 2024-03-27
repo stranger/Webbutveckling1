@@ -6,6 +6,7 @@
     position: relative;
     width: 100vw;
     margin-bottom: 15vh;
+
 }
 
 
@@ -34,27 +35,38 @@
     font-size: max(0.7rem, 1vw);
 }
 
-.post-text {
+.post-text-container {
     max-height: 60vh;
     flex: 0 1 max(500px, 50vw);
     margin-left: 10px;
     overflow-y: scroll;
+
+    flex-direction: column;
+
 }
 
-.post-text h1 {
+.post-title {
+    margin-bottom: 1vh;
+    text-align: center;
+    font-size: max(2rem, 3vw);
+    word-wrap: break-word;
+}
+
+.post-text {
     font-size: max(1.5rem, 2vw);
     word-wrap: break-word;
+    font-weight: 300;
 }
 
 .show-comments-btn {
     /* ta bort från dokumentets flöde så den inte påverkar andra element */
     position: absolute;
     z-index: 2;
-    right: -10px;
-    bottom: -40px;
+    /* försvinner inte åt höger och stannar under texten alla skärmar */
+    right: 1vw;
+    bottom: -5vh;
     border: none;
     background: none;
-
     /* sätter nummret i mitten */
     display: flex;
     align-items: center;

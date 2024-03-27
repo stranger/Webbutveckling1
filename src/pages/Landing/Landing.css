@@ -55,6 +55,9 @@
     flex-direction: column;
     /* horizontal axis */
     align-items: center;
+
+    /* behöver sätta den här för annars skapar show-comment-btn lite overflow, och skärmen kan nu krympas till 0 */
+    overflow-x: hidden;
 }
 
 .blog-title {

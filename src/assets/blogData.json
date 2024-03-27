@@ -1,9 +1,10 @@
 {
   "posts": [
     {
-      "image": "./../../../delmoment-images/website4.png",
+      "image": "./../../../delmoment-images/website4.jpg",
       "description": "Delmoment 4",
-      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae, cupiditate repellat ipsam vero enim non est et. Unde officia dolor exercitationem sequi cum provident sunt labore corrupti culpa voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae, cupiditate repellat ipsam vero enim non est et. Unde officia dolor exercitationem sequi cum provident sunt labore corrupti culpa voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae, cupiditate repellat ipsam vero enim non est et. Unde officia dolor exercitationem sequi cum provident sunt labore corrupti culpa voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beaorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae, cupiditate repellat ipsam vero enim non est et. Unde officia dolor exercitationem sequi cum provident sunt labore corrupti culpa voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae, cupiditate repellat ipsam vero enim non est et. Unde officia dolor exercitationem sequi cum provident sunt labore corrupti culpa voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae, cupiditate repellat ipsam vero enim non est et. Unde officia dolor exercitationem sequi cum provident sunt labore corrupti culpa voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ptae, cupiditate repellat ipsam vero enim non est et. Unde officia dolor exercitationem sequi cum provident sunt labore corrupti culpa voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae, cupiditate repellat ipsam vero enim non est et. Unde officia dolor exercitationem sequi cum provident sunt labore corrupti culpa voluptatum! ",
+      "title": "Fluid layout, videos och tillgänlighet ",
+      "text": "Jag hade ingen aning att clamp(), min() och max() fanns. Istället för media queries började jag använda dom istället. Media queries är klumpiga men behövdes annars för text eftersom den blir för liten/stor till slut med vw eller %. Jag använde dock clamp fel och borde bara använt max/min eftersom jag inte behövde ett maximalt värde för sidan ska kunna bli så stor som helst ändå. Den här bloggen känns som jag kodat en helt perfekt fluid layout, jag använde massa max i flex-basis och 0 media queries. Fick veta mer om ARIA och hur det ska användas med osemantiska element och vilket video format är bäst för vad.",
       "comments": [
         {
           "user": "",
@@ -12,9 +13,10 @@
       ]
     },
     {
-      "image": "./../../../delmoment-images/website3.png",
+      "image": "./../../../delmoment-images/website3.jpg",
       "description": "Delmoment 3",
-      "text": "yoyyyyyyyyyyyyy",
+      "title": "Flex, tabeller och formulär",
+      "text": "Hade glömt bort det mesta om Flex. Jag förstog inte hur flex-wrap och flex-basis fungerade och varför saker inte wrappade. Jag lärde mig mycket om responsiv layouts och att inte använda absoluta värden så mycket. Den här bloggen har inga absoluta värden alls nästan.  Gick igenom hur tabeller ska struktureras och hur formulär fungerar.",
       "comments": [
         {
           "user": "",
@@ -23,9 +25,10 @@
       ]
     },
     {
-      "image": "./../../../delmoment-images/website2.png",
+      "image": "./../../../delmoment-images/website2.jpg",
       "description": "Delmoment 2",
-      "text": "",
+      "title": "XML, XHTML och teckenkodning",
+      "text": "I det här delmomentet gick jag väldigt djupt in i teckenkodning. Jag lärde mig varför det är som det är pga gamla system och hur allt fungerar i bakgrunden. Jag lärde mig också hur man gör en egen SVG med XML. Lästa om historian om HTML och XHTML.",
       "comments": [
         {
           "user": "",
@@ -34,9 +37,10 @@
       ]
     },
     {
-      "image": "./../../../delmoment-images/website1.png",
+      "image": "./../../../delmoment-images/website1.jpg",
       "description": "Delmoment 1",
-      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.  ipsum dolor sit amet consectetur adipisicing elit. Porro bea",
+      "title": "Grunden",
+      "text": "Lärde mig om grunderna och tekniska begrepp",
       "comments": [
         {
           "user": "",

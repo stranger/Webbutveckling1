@@ -18,15 +18,16 @@ export default function BlogPost(props) {
   return (
     <article className="post-container">
       <figure className="post-figure">
-        {/* Jag måste ha en div här så att bilden kan få overflow scroll utan att figcaption är inne i scrollen och istället är på botten. Det är tydligen ok*/}
+        {/* Jag måste ha en div här så att bilden kan få overflow scroll utan att figcaption är inne i scrollen och istället är på botten. OK för accessibilitet enligt standard */}
         <div>
           <img src={props.blogData.image} alt="Bild på uppgift"></img>
         </div>
         <figcaption>{props.blogData.description}</figcaption>
       </figure>
 
-      <section className="post-text">
-        <h1>{props.blogData.text}</h1>
+      <section className="post-text-container">
+        <h1 className="post-title">{props.blogData.title}</h1>
+        <h2 className="post-text">{props.blogData.text}</h2>
       </section>
 
       {/* viktigt att passa fuktionen istället för att calla den, om jag skrev utan arrow funktionen skulle den executa direkt när komponenten laddas in  */}
@@ -34,10 +35,13 @@ export default function BlogPost(props) {
         onClick={() => setClick(!clicked)}
         className="show-comments-btn"
         type="button"
-        aria-label="Visa kommentarer"
+        aria-label={`Visa ${blogComments.length} kommentarer`}
       >
-        <ShowCommentsIcon />
-        <p className="comment-number">{blogComments.length}</p>
+        {/* Screenreaders behöver bara knappen */}
+        <ShowCommentsIcon aria-hidden />
+        <p className="comment-number" aria-hidden>
+          {blogComments.length}
+        </p>
       </button>
 
       <CommentContainer

@@ -16,8 +16,15 @@ export default function Navbar() {
             <li>Hem</li>
           </a>
         </ul>
-        <button className="navbar-toggle" onClick={() => setClick(!clicked)}>
-          {clicked ? <h1>X</h1> : <Burger />}
+        <button
+          className="navbar-toggle"
+          onClick={() => setClick(!clicked)}
+          type="button"
+          aria-expanded={clicked}
+          aria-label="Öppna eller stäng navigation meny"
+        >
+          {/* aria-hidden för att screen-readers inte ska ikonen, dom har redan knappen */}
+          {clicked ? <span aria-hidden="true">&times;</span> : <Burger />}
         </button>
       </nav>
     </header>

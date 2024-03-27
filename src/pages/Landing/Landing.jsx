@@ -1,5 +1,7 @@
 import "./Landing.css";
 
+// eftersom det har mer än 1 export (inte default export) så måste {} användas
+
 import { Fade } from "react-awesome-reveal";
 
 import { IntroLogo } from "../../assets/icons";
@@ -10,8 +12,8 @@ import blogData from "./../../assets/blogData.json";
 
 export default function Landing() {
   return (
-    <div className="landing">
-      <section className="intro-section" id="intro">
+    <section className="landing">
+      <section aria-label="Introduktion" className="intro-section" id="intro">
         <div className="intro-text-container">
           <h1 className="intro-title">WEBBUTVECKLING 1</h1>
           <h2 className="intro-subtitle">
@@ -24,6 +26,7 @@ export default function Landing() {
       </section>
       <hr className="landing-divider" />
 
+      {/* aria-label behövs inte, h3 förklarar */}
       <section className="blog-section" id="blog">
         <h3 className="blog-title">BLOGGEN</h3>
         {/* Fadar in när den visas i viewport med awesome-reveal */}
@@ -40,6 +43,6 @@ export default function Landing() {
           })}
         </Fade>
       </section>
-    </div>
+    </section>
   );
 }

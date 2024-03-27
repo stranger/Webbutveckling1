@@ -1,6 +1,7 @@
 /* mesta kommenterat i Landing/BlogPost */
 
 .header {
+
     /* Stannar alltid med skroll och påverkar inga andra element */
     position: fixed;
     /* body padding får den annars att overflowa */
@@ -25,10 +26,8 @@
 }
 
 .nav-links {
-
     /* tar bort ul punkter */
     list-style: none;
-
 }
 
 .nav-links li {
@@ -44,6 +43,13 @@
     margin-left: auto;
     display: none;
 }
+
+.navbar-toggle span {
+    font-size: 3rem;
+    color: rgb(252, 58, 58);
+}
+
+
 
 .navbar-toggle:hover {
     cursor: pointer;
@@ -61,13 +67,17 @@
     }
 
     .nav-active {
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        height: 100vh;
+        height: 110vh;
+
+
         position: absolute;
-        left: 0;
-        right: 0;
+        /* bypass body padding men känns dåligt */
+        left: -1vw;
+        right: -1vw;
         top: 0;
         background-color: rgba(67, 0, 121, 0.829);
         /* går under navbar elementen osv */
