@@ -25,7 +25,6 @@ export default function CommentContainer(props) {
       style={{ display: props.clicked ? "flex" : "none" }}
       /* gömmer för screen readers när den inte finns */
       aria-hidden={!props.clicked}
-      aria-labelledby="comments-title"
     >
       <div
         className="backdrop"
@@ -35,7 +34,7 @@ export default function CommentContainer(props) {
       <section className="comments-container">
         <section className="comments-header">
           <CommentsIcon className="comments-title-icon" />
-          <h2 id="comments-title">{props.description} kommentarer</h2>
+          <h2 className="comments-title">{props.description} kommentarer</h2>
         </section>
 
         <button
@@ -49,16 +48,12 @@ export default function CommentContainer(props) {
 
         <hr />
 
-        <section
-          className="comments"
-          role="contentinfo"
-          aria-label="Kommentarer"
-        >
+        <section className="comments">
           {/* Map förklarad i Landing.jsx */}
           {props.blogComments.map((comment, key) => {
             return (
               <div key={key} className="comment">
-                <h2 className="comment-username">{comment.user}:</h2>
+                <h3 className="comment-username">{comment.user}:</h3>
                 <p className="comment-text">{comment.text}</p>
                 <hr />
               </div>
