@@ -13,7 +13,7 @@ import blogData from "./../../assets/blogData.json";
 export default function Landing() {
   return (
     <section className="landing">
-      <section aria-label="Introduktion" className="intro-section" id="intro">
+      <section className="intro-section" id="intro">
         <div className="intro-text-container">
           <h1 className="intro-title">WEBBUTVECKLING 1</h1>
           <h2 className="intro-subtitle">
@@ -26,12 +26,11 @@ export default function Landing() {
       </section>
       <hr className="landing-divider" />
 
-      {/* aria-label behövs inte, h3 förklarar */}
       <section className="blog-section" id="blog">
         <h3 className="blog-title">BLOGGEN</h3>
         {/* Fadar in när den visas i viewport med awesome-reveal */}
         <Fade className="fade" cascade triggerOnce damping={0.01}>
-          {/* Itererar över posts arrayen. Data är objekten i arrayen, key är index som react behöver för att hålla koll på vilket element är vad så att den kan re-rendera bara den komponenten istället för alla blog posts */}
+          {/* Itererar över posts arrayen. Data är objekten i arrayen, key är index som react behöver för att hålla koll på vilket element är vad så att den kan re-rendera bara den komponenten istället för alla blog posts, m.m */}
           {blogData.posts.map((data, key) => {
             return (
               <BlogPost

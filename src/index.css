@@ -112,9 +112,7 @@ section {
     display: block;
 }
 
-html {
-    font-family: 'SF Pro', 'Helvetica';
-}
+
 
 body {
     line-height: 1;
@@ -152,9 +150,7 @@ table {
 
 /* RESET END */
 
-.react-reveal {
-    animation-fill-mode: backwards !important;
-}
+
 
 body {
     /* min-height istället för height så den kan bli större utan overflow osv */
@@ -163,8 +159,12 @@ body {
     padding: 0.5vw 1vw 0 1vw;
 
     color: rgb(241, 241, 241);
-    /* förklarat redan */
+    /* Skapar en gradient. background-color har ingen gradient, så använder background-image */
     background-image: linear-gradient(to bottom, #3b007e, #8b21b4);
+}
+
+html {
+    font-family: 'SF Pro', 'Helvetica', sans-serif;
 }
 
 button:hover {

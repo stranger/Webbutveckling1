@@ -18,8 +18,8 @@
 
 
 .comments-container {
-    /* Skapar en gradient. background-color har ingen gradient, så använder background-image */
-    background-image: linear-gradient(to bottom, rgb(31, 31, 31), rgb(22, 21, 21));
+
+    background-color: rgb(17, 17, 17);
     height: 80vh;
     width: max(100px, 70vw);
     /* inte bara för att stanna, absolute positionerar relativt till positionerad förälder, det gör inte fixed den går till roten */

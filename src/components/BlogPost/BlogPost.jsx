@@ -25,10 +25,10 @@ export default function BlogPost(props) {
         <figcaption>{props.blogData.description}</figcaption>
       </figure>
 
-      <section className="post-text-container">
+      <article className="post-text-container">
         <h1 className="post-title">{props.blogData.title}</h1>
-        <h2 className="post-text">{props.blogData.text}</h2>
-      </section>
+        <p className="post-text">{props.blogData.text}</p>
+      </article>
 
       {/* viktigt att passa fuktionen istället för att calla den, om jag skrev utan arrow funktionen skulle den executa direkt när komponenten laddas in  */}
       <button

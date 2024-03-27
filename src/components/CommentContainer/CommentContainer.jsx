@@ -44,7 +44,7 @@ export default function CommentContainer(props) {
           type="button"
           aria-label="Dölj kommentarer"
         >
-          <span aria-hidden="true">&times;</span>
+          <span aria-hidden>&times;</span>
         </button>
 
         <hr />
@@ -91,9 +91,9 @@ export default function CommentContainer(props) {
             onClick={() => addComment()}
             className="comment-submit-btn"
             type="button"
-            aria-label="Skicka kommentar"
+            aria-label="Posta kommentar"
           >
-            <AddCommentIcon />
+            <AddCommentIcon aria-hidden />
           </button>
         </form>
       </section>
