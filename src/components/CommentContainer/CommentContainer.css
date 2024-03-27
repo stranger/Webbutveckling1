@@ -50,12 +50,12 @@
 
 }
 
-.comments-title {
+.comments-header {
     text-align: center;
 
 }
 
-.comments-title h1 {
+.comments-title h2 {
     font-size: max(1rem, 3vw);
 }
 
@@ -96,7 +96,21 @@
 }
 
 
-.comment-form fieldset {}
+/* En vanlig visually-hidden ruleset från online för att gömma men inte för screenreaders */
+
+.comment-form legend {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
 
 
 .comment-form label {

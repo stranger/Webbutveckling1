@@ -27,7 +27,7 @@ export default function Landing() {
       <hr className="landing-divider" />
 
       <section className="blog-section" id="blog">
-        <h3 className="blog-title">BLOGGEN</h3>
+        <h2 className="blog-title">BLOGGEN</h2>
         {/* Fadar in när den visas i viewport med awesome-reveal */}
         <Fade className="fade" cascade triggerOnce damping={0.01}>
           {/* Itererar över posts arrayen. Data är objekten i arrayen, key är index som react behöver för att hålla koll på vilket element är vad så att den kan re-rendera bara den komponenten istället för alla blog posts, m.m */}

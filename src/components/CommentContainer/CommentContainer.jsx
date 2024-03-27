@@ -25,17 +25,17 @@ export default function CommentContainer(props) {
       style={{ display: props.clicked ? "flex" : "none" }}
       /* gömmer för screen readers när den inte finns */
       aria-hidden={!props.clicked}
+      aria-labelledby="comments-title"
     >
       <div
         className="backdrop"
         onClick={() => props.setClick(!props.clicked)}
-        aria-hidden
       ></div>
 
       <section className="comments-container">
-        <section className="comments-title">
+        <section className="comments-header">
           <CommentsIcon className="comments-title-icon" />
-          <h1>{props.description} kommentarer</h1>
+          <h2 id="comments-title">{props.description} kommentarer</h2>
         </section>
 
         <button
@@ -49,12 +49,16 @@ export default function CommentContainer(props) {
 
         <hr />
 
-        <section className="comments">
+        <section
+          className="comments"
+          role="contentinfo"
+          aria-label="Kommentarer"
+        >
           {/* Map förklarad i Landing.jsx */}
           {props.blogComments.map((comment, key) => {
             return (
               <div key={key} className="comment">
-                <h1 className="comment-username">{comment.user}:</h1>
+                <h2 className="comment-username">{comment.user}:</h2>
                 <p className="comment-text">{comment.text}</p>
                 <hr />
               </div>
@@ -64,6 +68,7 @@ export default function CommentContainer(props) {
 
         <form className="comment-form">
           <fieldset>
+            <legend>Skriv din kommentar</legend>
             <label>
               Namn:
               <input
@@ -93,7 +98,7 @@ export default function CommentContainer(props) {
             type="button"
             aria-label="Posta kommentar"
           >
-            <AddCommentIcon aria-hidden />
+            <AddCommentIcon />
           </button>
         </form>
       </section>

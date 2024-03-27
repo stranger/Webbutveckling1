@@ -12,12 +12,14 @@ export default function Navbar() {
     <header className="header">
       <nav className="nav">
         <a onClick={() => setClick(!clicked)} href="#intro">
-          <h1 className="nav-title">WLOGG</h1>
+          <h2 className="nav-title">WLOGG</h2>
         </a>
         <ul className={`nav-links ${clicked ? "nav-active" : "nav-inactive"}`}>
-          <a onClick={() => setClick(!clicked)} href="#intro">
-            <li>Hem</li>
-          </a>
+          <li>
+            <a onClick={() => setClick(!clicked)} href="#intro">
+              Hem
+            </a>
+          </li>
         </ul>
         <button
           className="navbar-toggle"
@@ -26,8 +28,8 @@ export default function Navbar() {
           aria-expanded={clicked}
           aria-label="Öppna eller stäng navigation meny"
         >
-          {/* aria-hidden för att screen-readers inte ska ikonen, dom har redan knappen */}
-          {clicked ? <span aria-hidden="true">&times;</span> : <Burger />}
+          {/* aria-hidden för att screen-readers inte ska se ikonen, dom har redan knappen */}
+          {clicked ? <span aria-hidden>&times;</span> : <Burger />}
         </button>
       </nav>
     </header>

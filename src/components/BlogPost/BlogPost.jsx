@@ -20,13 +20,16 @@ export default function BlogPost(props) {
       <figure className="post-figure">
         {/* Jag måste ha en div här så att bilden kan få overflow scroll utan att figcaption är inne i scrollen och istället är på botten. OK för accessibilitet enligt standard */}
         <div>
-          <img src={props.blogData.image} alt="Bild på uppgift"></img>
+          <img
+            src={props.blogData.image}
+            alt={`Bild på ${props.blogData.description}`}
+          ></img>
         </div>
         <figcaption>{props.blogData.description}</figcaption>
       </figure>
 
       <article className="post-text-container">
-        <h1 className="post-title">{props.blogData.title}</h1>
+        <h3 className="post-title">{props.blogData.title}</h3>
         <p className="post-text">{props.blogData.text}</p>
       </article>
 
@@ -37,11 +40,10 @@ export default function BlogPost(props) {
         type="button"
         aria-label={`Visa ${blogComments.length} kommentarer`}
       >
-        {/* Screenreaders behöver bara knappen */}
-        <ShowCommentsIcon aria-hidden />
-        <p className="comment-number" aria-hidden>
+        <ShowCommentsIcon />
+        <span className="comment-number" aria-hidden>
           {blogComments.length}
-        </p>
+        </span>
       </button>
 
       <CommentContainer

@@ -3,7 +3,13 @@ import * as React from "react";
 // React kan inte importa svgs direkt från filen som komponenter utan extra library eller webpack så gör så här
 
 const Burger = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={18} height={20} {...props}>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={20}
+    aria-hidden="true"
+    {...props}
+  >
     <path stroke="#FFF" d="M0 2h20M0 10h20M0 18h20" />
   </svg>
 );
@@ -26,6 +32,7 @@ const IntroLogo = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
     viewBox="0 0 555 555"
+    aria-hidden="true"
     {...props}
   >
     <path
@@ -1702,6 +1709,7 @@ const ShowCommentsIcon = (props) => (
     width={100}
     height={100}
     viewBox="0 0 96 96"
+    aria-hidden="true"
     {...props}
   >
     <path
@@ -1722,7 +1730,12 @@ const ShowCommentsIcon = (props) => (
 );
 
 const AddCommentIcon = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" {...props}>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 128 128"
+    aria-hidden="true"
+    {...props}
+  >
     <path
       d="M31.9 95.6C23.9 87.5 19 76.3 19 64c0-24.9 20.1-45 45-45s45 20.1 45 45-20.1 45-45 45H19l12.9-13.4z"
       style={{
@@ -1764,6 +1777,7 @@ const CommentsIcon = (props) => (
     width={100}
     height={100}
     viewBox="0 0 96 96"
+    aria-hidden="true"
     {...props}
   >
     <path
