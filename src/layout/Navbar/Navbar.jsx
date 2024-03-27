@@ -11,7 +11,9 @@ export default function Navbar() {
   return (
     <header className="header">
       <nav className="nav">
-        <h1 className="nav-title">WLOGG</h1>
+        <a onClick={() => setClick(!clicked)} href="#intro">
+          <h1 className="nav-title">WLOGG</h1>
+        </a>
         <ul className={`nav-links ${clicked ? "nav-active" : "nav-inactive"}`}>
           <a onClick={() => setClick(!clicked)} href="#intro">
             <li>Hem</li>
