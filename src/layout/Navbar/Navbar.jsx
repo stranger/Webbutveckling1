@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Burger } from "../../assets/icons.jsx";
 
 export default function Navbar() {
+  // förklarat mesta i BlogPost
   const [clicked, setClick] = useState(false);
 
   return (
@@ -12,7 +13,7 @@ export default function Navbar() {
       <nav className="nav">
         <h1 className="nav-title">WLOGG</h1>
         <ul className={`nav-links ${clicked ? "nav-active" : "nav-inactive"}`}>
-          <a href="#intro">
+          <a onClick={() => setClick(!clicked)} href="#intro">
             <li>Hem</li>
           </a>
         </ul>

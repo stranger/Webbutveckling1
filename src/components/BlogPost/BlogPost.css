@@ -58,13 +58,15 @@
     font-weight: 300;
 }
 
+
+
 .show-comments-btn {
     /* ta bort från dokumentets flöde så den inte påverkar andra element */
     position: absolute;
     z-index: 2;
     /* försvinner inte åt höger och stannar under texten alla skärmar */
     right: 1vw;
-    bottom: -5vh;
+    bottom: -50px;
     border: none;
     background: none;
     /* sätter nummret i mitten */
