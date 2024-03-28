@@ -16,6 +16,7 @@ export default function Navbar() {
         </a>
         <ul className={`nav-links ${clicked ? "nav-active" : "nav-inactive"}`}>
           <li>
+            {/* får inte wrappa li enligt WAI */}
             <a onClick={() => setClick(!clicked)} href="#intro">
               Hem
             </a>

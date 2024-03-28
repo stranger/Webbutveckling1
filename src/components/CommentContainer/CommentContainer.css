@@ -1,9 +1,11 @@
 .comments-main {
     display: none;
     justify-content: center;
+    /* absolut postionerar relativt till närmast förälder med position, fixed relativ till rot */
     position: fixed;
     height: 100vh;
     width: 100vw;
+    /* högre upp än alla andra element */
     z-index: 9999999;
 }
 
@@ -18,23 +20,23 @@
 
 
 .comments-container {
-
     background-color: rgb(17, 17, 17);
     height: 80vh;
     width: max(100px, 70vw);
-    /* inte bara för att stanna, absolute positionerar relativt till positionerad förälder, det gör inte fixed den går till roten */
+
     position: fixed;
     z-index: 12;
     top: 10%;
+    /* rundare hörn */
     border-radius: 1%;
     padding: 10px 10px 0 10px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 
 
 .close-comments-btn {
+    /* relativ till comments-container */
     position: absolute;
     top: 0;
     right: 0;

@@ -12,7 +12,7 @@ export default function CommentContainer(props) {
   const addComment = () => {
     if (inputName != "" && inputComment != "") {
       const comment = { user: inputName, text: inputComment };
-      /* Spread operator så jag får alla values inuti arrayen istället för att bara sätta in en array */
+      /* Spread operator så jag får ut alla values inuti arrayen istället för att bara sätta in en hel array */
       props.setBlogComments((oldState) => [...oldState, comment]);
       setName("");
       setComment("");
@@ -22,6 +22,7 @@ export default function CommentContainer(props) {
   return (
     <aside
       className="comments-main"
+      /* true flex false none. Använder förälder state istället för egen så BlogPost kan visa den med show-comments-btn annars måste jag göra dubbel */
       style={{ display: props.clicked ? "flex" : "none" }}
       /* gömmer för screen readers när den inte finns */
       aria-hidden={!props.clicked}
@@ -62,6 +63,7 @@ export default function CommentContainer(props) {
         </section>
 
         <form className="comment-form">
+          {/* fieldset grupperar allt för accessibiilty och läser upp legend */}
           <fieldset>
             <legend>Skriv din kommentar</legend>
             <label>
@@ -87,6 +89,7 @@ export default function CommentContainer(props) {
               ></textarea>
             </label>
           </fieldset>
+          {/* type=button så den inte blir submit */}
           <button
             onClick={() => addComment()}
             className="comment-submit-btn"
