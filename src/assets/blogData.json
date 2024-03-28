@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "image": "./../../../delmoment-bilder/website5.jpg",
+      "image": "./delmoment-bilder/website5.jpg",
       "description": "Delmoment 5",
       "title": "Inception",
       "text": "Det här är faktiskt mitt första react projekt, men är rätt säker på att jag kodat bra. Jag har använt state och uppdaterat med dens set funktion, brytit ner komponenter så att inte hela sidan re-renderas efter varje uppdatering och jag har inte använt useEffect alls/i onödan. Jag har kommenterat det som är viktigt och lite mer men inte allting eftersom det är så mycket. Använt ARIA mycket bättre än förut",
@@ -14,7 +14,7 @@
     },
 
     {
-      "image": "./../../../delmoment-bilder/website4.jpg",
+      "image": "./delmoment-bilder/website4.jpg",
       "description": "Delmoment 4",
       "title": "Fluid layout, videos och tillgänlighet ",
       "text": "Jag hade ingen aning att clamp(), min() och max() fanns. Istället för media queries började jag använda dom istället. Media queries är klumpiga men behövdes annars för text eftersom den blir för liten/stor till slut med vw eller %. Jag använde dock clamp fel och borde bara använt max/min eftersom jag inte behövde ett maximalt värde för sidan ska kunna bli så stor som helst ändå. Fick veta mer om ARIA och vilket video format är bäst för vad.",
@@ -26,7 +26,7 @@
       ]
     },
     {
-      "image": "./../../../delmoment-bilder/website3.jpg",
+      "image": "./delmoment-bilder/website3.jpg",
       "description": "Delmoment 3",
       "title": "Flex, tabeller och formulär",
       "text": "Hade glömt bort det mesta om Flex. Jag förstog inte hur flex-wrap och flex-basis fungerade och varför saker inte wrappade. Jag lärde mig mycket om responsiv layouts och att inte använda absoluta värden så mycket. Den här bloggen har inga absoluta värden alls nästan.  Gick igenom hur tabeller ska struktureras och hur formulär fungerar.",
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "image": "./../../../delmoment-bilder/website2.jpg",
+      "image": "./delmoment-bilder/website2.jpg",
       "description": "Delmoment 2",
       "title": "XML, XHTML och teckenkodning",
       "text": "I det här delmomentet gick jag väldigt djupt in i teckenkodning. Jag lärde mig varför det är som det är pga gamla system och hur allt fungerar i bakgrunden. Jag lärde mig också hur man gör en egen SVG med XML. Läste historian om HTML och XHTML.",
@@ -50,7 +50,7 @@
       ]
     },
     {
-      "image": "./../../../delmoment-bilder/website1.jpg",
+      "image": "./delmoment-bilder/website1.jpg",
       "description": "Delmoment 1",
       "title": "Grunden",
       "text": "Lärde mig om grunderna och tekniska begrepp",
