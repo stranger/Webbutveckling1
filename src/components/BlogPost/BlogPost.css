@@ -11,7 +11,7 @@
 
 
 .post-figure {
-    /* sätter flex-basis ha storlek 40 viewport width, minimum 300px när 40vw är <300px tills väggarna krymper den */
+    /* förklarat i landing */
     flex: 0 1 max(350px, 40vw);
     margin-bottom: 10px;
 
@@ -19,7 +19,7 @@
 
 .post-figure div {
     /* 
-    Den här idén jag hade med overflow skroll är inte en sån bra idé ganska jobbigt att skrolla genom sidan, men eh ändå kul att testa
+    Den här idén jag hade med overflow skroll är inte en sån bra idé ganska jobbigt att skrolla genom sidan speciellt på mobil, men eh ändå kul att testa
     */
     max-height: max(250px, 50vh);
     /* skrolla bilden när den är större än 30vh */
@@ -40,9 +40,7 @@
     flex: 0 1 max(500px, 50vw);
     margin-left: 10px;
     overflow-y: scroll;
-
     flex-direction: column;
-
 }
 
 .post-title {

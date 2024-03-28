@@ -20,6 +20,7 @@ export default function BlogPost(props) {
       <figure className="post-figure">
         {/* div här så att bilden kan få overflow scroll utan att figcaption är inne i scrollen och istället är på botten. Flow content är ok att ha inne i figure enligt mdn */}
         <div>
+          {/* sätter in blogData objektet jag skickat via 'attributet' blogData */}
           <img
             src={props.blogData.image}
             alt={`Bild på ${props.blogData.description}`}
