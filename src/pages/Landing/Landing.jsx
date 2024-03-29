@@ -12,7 +12,7 @@ import blogData from "./../../assets/blogData.json";
 
 export default function Landing() {
   return (
-    <section className="landing">
+    <main className="landing">
       <section className="intro-section" id="intro">
         <div className="intro-text-container">
           {/* h1 läses upp först sen h2 för accessibilty */}
@@ -43,6 +43,6 @@ export default function Landing() {
           })}
         </Fade>
       </section>
-    </section>
+    </main>
   );
 }

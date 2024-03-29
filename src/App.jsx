@@ -8,10 +8,8 @@ function App() {
   return (
     <div id="app">
       <Navbar></Navbar>
-      <main>
-        {/* ska lära mig om routing senare */}
-        <Landing></Landing>
-      </main>
+      {/* ska lära mig om routing senare */}
+      <Landing></Landing>
       <Footer></Footer>
     </div>
   );
