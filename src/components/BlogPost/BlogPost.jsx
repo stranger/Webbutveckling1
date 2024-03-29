@@ -17,7 +17,11 @@ export default function BlogPost(props) {
 
   return (
     <article className="post-container">
-      <figure className="post-figure">
+      <figure
+        className="post-figure"
+        // enligt w3 ska figure alltid ha role=group
+        role="group"
+      >
         {/* div här så att bilden kan få overflow scroll utan att figcaption är inne i scrollen och istället är på botten. Flow content är ok att ha inne i figure enligt mdn */}
         <div>
           {/* sätter in blogData objektet jag skickat via 'attributet' blogData */}
