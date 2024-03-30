@@ -87,7 +87,14 @@ export default function CommentContainer(props) {
             })}
           </article>
 
-          <form className="comment-form">
+          <form
+            className="comment-form"
+            // enter triggar onSubmit så vi måste hantera det
+            onSubmit={(e) => {
+              e.preventDefault();
+              addComment();
+            }}
+          >
             {/* fieldset grupperar allt för accessibiilty och läser upp legend */}
             <fieldset>
               <legend>Skriv din kommentar</legend>
