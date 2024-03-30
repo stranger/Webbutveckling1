@@ -56,12 +56,12 @@ export default function CommentContainer(props) {
         ></div>
 
         <section className="comments-content-container">
-          <section className="comments-header">
+          <article className="comments-header">
             <CommentsIcon className="comments-title-icon" />
             <h2 className="comments-title">
               {props.data.description} kommentarer
             </h2>
-          </section>
+          </article>
 
           <button
             onClick={() => props.setClick(!props.clicked)}
@@ -74,7 +74,7 @@ export default function CommentContainer(props) {
 
           <hr />
 
-          <section className="comments">
+          <article className="comments">
             {/* Map förklarad i Landing.jsx */}
             {blogComments.map((comment, key) => {
               return (
@@ -85,7 +85,7 @@ export default function CommentContainer(props) {
                 </div>
               );
             })}
-          </section>
+          </article>
 
           <form className="comment-form">
             {/* fieldset grupperar allt för accessibiilty och läser upp legend */}
