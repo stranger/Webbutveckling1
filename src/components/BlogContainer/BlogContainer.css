@@ -1,0 +1,20 @@
+.blog-section {
+    display: flex;
+    flex-direction: column;
+    /* horizontal axis */
+    align-items: center;
+
+    /* behöver sätta den här för annars skapar show-comment-btn lite overflow, och skärmen kan nu krympas till 0 */
+    overflow-x: hidden;
+}
+
+.blog-title {
+    font-size: max(2rem, 7vw);
+    margin-bottom: 7vh;
+}
+
+.fade {
+    /* 
+    !important måste användas för att fixa z-index problem med react-awesome-reveal library */
+    animation-fill-mode: backwards !important;
+}

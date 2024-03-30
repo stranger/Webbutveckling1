@@ -1,14 +1,9 @@
 import "./Landing.css";
 
-// eftersom det har mer än 1 export (inte default export) så måste {} användas
-
-import { Fade } from "react-awesome-reveal";
-
+// eftersom det har mer än 1 export (inte default export) så ska {} användas
 import { IntroLogo } from "../../assets/icons";
 
-import BlogPost from "./../../components/BlogPost/BlogPost";
-
-import blogData from "./../../assets/blogData.json";
+import BlogContainer from "../../components/BlogContainer/BlogContainer";
 
 export default function Landing() {
   return (
@@ -27,22 +22,7 @@ export default function Landing() {
       </section>
       <hr className="landing-divider" />
 
-      <section className="blog-section" id="blog">
-        <h2 className="blog-title">BLOGGEN</h2>
-        {/* Fadar in när den visas i viewport */}
-        <Fade className="fade" cascade triggerOnce damping={0.01}>
-          {/* Itererar över posts arrayen. Data är objekten i arrayen, key är index som react behöver för att hålla koll på vilket element är vad så att den kan re-rendera bara den komponenten istället för alla blog posts, m.m */}
-          {blogData.posts.map((data, key) => {
-            return (
-              <BlogPost
-                key={key}
-                blogData={data}
-                className="blog-post"
-              ></BlogPost>
-            );
-          })}
-        </Fade>
-      </section>
+      <BlogContainer></BlogContainer>
     </main>
   );
 }
