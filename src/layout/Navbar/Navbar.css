@@ -6,8 +6,8 @@
     position: fixed;
     /* body padding får den annars att overflowa */
     width: 98vw;
-    /* Navbar över allt annat förutom comments (11)*/
-    z-index: 10;
+    /* Navbar över allt annat */
+    z-index: 99;
 }
 
 .nav {

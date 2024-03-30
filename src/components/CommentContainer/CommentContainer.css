@@ -4,14 +4,11 @@
     /* overflowar annars till höger */
     right: 1vw;
     bottom: 0;
-    /* högre upp än alla andra element */
-    z-index: 9999;
 }
 
 .show-comments-btn {
     /* */
     position: absolute;
-    z-index: -1;
     right: 0;
     border: none;
     background: none;
@@ -40,7 +37,8 @@
     height: 100vh;
     width: 100vw;
     left: 0;
-
+    /* högre upp än allt annat förutom nav */
+    z-index: 98;
 }
 
 .backdrop {

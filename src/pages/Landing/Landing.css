@@ -34,8 +34,8 @@
 .intro-title {
     font-size: max(1.7rem, 3vw);
     margin-bottom: 10px;
-    /* tillåt ord att wrappa */
-    word-wrap: break-word;
+    /* tillåt bokstäver att wrappa */
+    word-break: break-all;
 }
 
 .intro-subtitle {
@@ -43,7 +43,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 200;
-    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .webb-logo {
