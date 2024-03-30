@@ -29,13 +29,15 @@
     text-align: center;
     /* sätter flex-basis ha storlek 50 viewport width, minimum 300px när 50vw är mindre, sen shrink när väggarna klämmer */
     flex: 0 1 max(300px, 50vw);
+    /* flex shrinkar annars inte mindre än containers min-width vilket är default auto - width content "behöver" */
+    min-width: 0;
 }
 
 .intro-title {
     font-size: max(1.7rem, 3vw);
     margin-bottom: 10px;
     /* tillåt bokstäver att wrappa */
-    word-break: break-all;
+    word-wrap: break-word;
 }
 
 .intro-subtitle {
@@ -43,7 +45,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 200;
-    word-break: break-all;
+    word-wrap: break-word;
 }
 
 .webb-logo {
