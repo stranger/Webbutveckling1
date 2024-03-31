@@ -31,9 +31,7 @@
     margin-right: 2%;
     text-align: center;
     /* sätter flex-basis ha storlek 60% width, minimum 300px och wrap när 60% är mindre, sen shrink när väggarna klämmer */
-    flex: 0 1 max(300px, 60%);
-    /* flex shrinkar annars inte mindre än containers min-width vilket är default auto; width children "behöver" */
-    min-width: 0;
+    flex: 0 1 max(300px, 50%);
 }
 
 .intro-title {
@@ -53,5 +51,5 @@
 }
 
 .webb-logo {
-    flex: 0 1 max(250px, 35%);
+    flex: 0 1 max(250px, 30%);
 }

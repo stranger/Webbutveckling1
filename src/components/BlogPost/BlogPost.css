@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     /* Positioneringsankare */
     position: relative;
-    margin-bottom: 10vh;
+    margin-bottom: 15vh;
     /* max-width för wide screen och 4k skärmar brukar vara större, bättre att inte vara stretched då */
     max-width: 1920px;
     width: 80vw;
