@@ -17,7 +17,7 @@
       "image": "./delmoment-bilder/website4.jpg",
       "description": "Delmoment 4",
       "title": "Fluid layout, videos och tillgänlighet ",
-      "text": "Jag hade ingen aning att clamp(), min() och max() fanns. Istället för media queries började jag använda dom istället. Media queries är klumpiga men behövdes annars för text eftersom den blir för liten/stor till slut med vw eller %. Jag använde dock clamp fel och borde bara använt max/min eftersom jag inte behövde ett maximalt värde för sidan ska kunna bli så stor som helst ändå. Fick veta mer om ARIA och vilket video format är bäst för vad.",
+      "text": "Jag hade ingen aning att clamp(), min() och max() fanns. Istället för media queries började jag använda dom istället. Media queries är klumpiga men behövdes annars för text eftersom den blir för liten/stor till slut med vw eller %. Fick veta mer om ARIA och vilket video format är bäst för vad.",
       "comments": [
         {
           "user": "",
