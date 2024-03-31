@@ -7,6 +7,9 @@
     /* lägger allting ner efter varandra */
     flex-direction: column;
     padding-top: 10px;
+
+    /* när text inte kan wrappa mer utan word-break all så tillåt scroll  */
+    overflow-y: scroll;
 }
 
 .landing-divider {
@@ -24,18 +27,18 @@
     /* tillåt wrap när min-width eller flex-basis max nås */
     flex-wrap: wrap;
     margin-top: 40px;
-    max-width: 2500px;
+    max-width: clamp(300px, 70vw, 1920px);
 }
 
 .intro-text-container {
     margin-right: 2%;
     text-align: center;
-    /* sätter flex-basis ha storlek 60% width, minimum 300px och wrap när 60% är mindre, sen shrink när väggarna klämmer */
+    /* sätter flex-basis ha storlek 50% width, wrap och minimum när 300px, sen shrink när väggarna klämmer */
     flex: 0 1 max(300px, 50%);
 }
 
 .intro-title {
-    font-size: clamp(1.7rem, 4vw, 7rem);
+    font-size: clamp(1.7rem, 3vw, 6rem);
     margin-bottom: 10px;
     /* tillåt bokstäver att wrappa */
     word-wrap: break-word;
@@ -43,7 +46,7 @@
 }
 
 .intro-subtitle {
-    font-size: clamp(1rem, 3vw, 4rem);
+    font-size: clamp(1rem, 2vw, 3rem);
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 200;
@@ -51,5 +54,6 @@
 }
 
 .webb-logo {
-    flex: 0 1 max(250px, 30%);
+    flex: 0 1 max(200px, 30%);
+    min-width: 0;
 }
