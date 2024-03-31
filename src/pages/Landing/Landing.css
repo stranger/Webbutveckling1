@@ -20,28 +20,32 @@
     /* jämt mellanrum horizontalt */
     justify-content: center;
     align-items: center;
+    align-self: center;
     /* tillåt wrap när min-width eller flex-basis max nås */
     flex-wrap: wrap;
     margin-top: 40px;
+    max-width: 2500px;
 }
 
 .intro-text-container {
+    margin-right: 2%;
     text-align: center;
-    /* sätter flex-basis ha storlek 50 viewport width, minimum 300px när 50vw är mindre, sen shrink när väggarna klämmer */
-    flex: 0 1 max(300px, 50vw);
-    /* flex shrinkar annars inte mindre än containers min-width vilket är default auto - width content "behöver" */
+    /* sätter flex-basis ha storlek 60% width, minimum 300px och wrap när 60% är mindre, sen shrink när väggarna klämmer */
+    flex: 0 1 max(300px, 60%);
+    /* flex shrinkar annars inte mindre än containers min-width vilket är default auto; width children "behöver" */
     min-width: 0;
 }
 
 .intro-title {
-    font-size: max(1.7rem, 3vw);
+    font-size: clamp(1.7rem, 4vw, 7rem);
     margin-bottom: 10px;
     /* tillåt bokstäver att wrappa */
     word-wrap: break-word;
+
 }
 
 .intro-subtitle {
-    font-size: max(1rem, 3vw);
+    font-size: clamp(1rem, 3vw, 4rem);
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 200;
@@ -49,5 +53,5 @@
 }
 
 .webb-logo {
-    flex: 0 1 max(250px, 35vw);
+    flex: 0 1 max(250px, 35%);
 }

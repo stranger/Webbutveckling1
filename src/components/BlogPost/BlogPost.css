@@ -4,24 +4,27 @@
     flex-wrap: wrap;
     /* Positioneringsankare */
     position: relative;
-    width: 100vw;
-    margin-bottom: 15vh;
-
+    margin-bottom: 10vh;
+    /* max-width för wide screen och 4k skärmar brukar vara större, bättre att inte vara stretched då */
+    max-width: 1920px;
+    width: 80vw;
 }
 
 
 .post-figure {
-    /* förklarat i landing */
-    flex: 0 1 max(350px, 40vw);
+    /* grow när det finns space, wrap om 40% är 200px */
+    flex: 1 max(200px, 40%);
     margin-bottom: 10px;
-
+    margin-right: 1%;
 }
 
 .post-figure div {
     /* 
-    Den här idén jag hade med overflow skroll är inte en sån bra idé ganska jobbigt att skrolla genom sidan speciellt på mobil, men eh ändå kul att testa
+    300px minimum, annars 30vw, max 1000px
+
+    vw bättre än vh för wide screens och generellt så om vw är mindre vill jag ha mindre höjd
     */
-    max-height: max(250px, 50vh);
+    max-height: clamp(250px, 30vw, 1000px);
     /* skrolla bilden när den är större än 30vh */
     overflow-y: scroll;
 }
@@ -36,8 +39,10 @@
 }
 
 .post-text-container {
-    max-height: 60vh;
-    flex: 0 1 max(500px, 50vw);
+    /* bilden bestämmer min höjden på blogg posten men om det finns mycket text så kommer den att växa pga av detta */
+    max-height: 50vh;
+    /* grow när det finns space, wrap om 55% är 200px */
+    flex: 1 max(200px, 55%);
     margin-left: 10px;
     overflow-y: scroll;
     flex-direction: column;
@@ -46,12 +51,12 @@
 .post-title {
     margin-bottom: 1vh;
     text-align: center;
-    font-size: max(2rem, 3vw);
+    font-size: clamp(1.5rem, 3vw, 6rem);
     word-wrap: break-word;
 }
 
 .post-text {
-    font-size: max(1.5rem, 2vw);
+    font-size: clamp(1rem, 1.5vw, 4rem);
     word-wrap: break-word;
     font-weight: 300;
 }

@@ -18,7 +18,7 @@
 
 .nav-title {
     font-weight: 300;
-    font-size: max(1.5rem, 3vw);
+    font-size: max(1.5rem, 2.5vw);
     letter-spacing: 2px;
     /* word-break tillåter alltid wrap på nått sätt, white-space nowrap aldrig */
     white-space: nowrap;
@@ -33,7 +33,7 @@
 .nav-links li {
     margin-left: 1vw;
     display: inline-block;
-    font-size: max(1.2rem, 2vw);
+    font-size: max(1.2rem, 1.5vw);
 }
 
 .navbar-toggle {

@@ -9,7 +9,7 @@
 }
 
 .blog-title {
-    font-size: max(2rem, 7vw);
+    font-size: clamp(2rem, 7vw, 10rem);
     margin-bottom: 7vh;
 }
 

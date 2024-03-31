@@ -19,14 +19,14 @@
 }
 
 .show-comments-btn svg {
-    width: max(50px, 4vw);
-    height: max(50px, 4vw);
+    width: clamp(50px, 4vw, 150px);
+    height: clamp(50px, 4vw, 150px);
 }
 
 .comment-number {
     color: white;
     position: absolute;
-    font-size: max(1rem, 1vw);
+    font-size: clamp(1rem, 1vw, 4rem);
 }
 
 .comments-main {
