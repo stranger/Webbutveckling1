@@ -6,7 +6,9 @@
     /* längst vänster och höger av viewport, annars förstör body padding */
     left: 0;
     right: 0;
-    padding: 0 1vw;
+    top: 0;
+
+    padding: 1vw 1vw 0;
     /* Navbar över allt annat */
     z-index: 99;
 }
