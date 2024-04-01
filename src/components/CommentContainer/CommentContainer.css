@@ -53,7 +53,7 @@
 
 .comments-content-container {
     background-color: rgb(17, 17, 17);
-    height: 80vh;
+    height: max(300px, 80vh);
     max-width: clamp(400px, 70vw, 1920px);
     position: fixed;
     top: 10%;
@@ -92,7 +92,9 @@
 }
 
 
-.comments-title-icon {
+.comments-title-icon {}
+
+.comments-title-icon svg {
     width: max(50px, 10%);
     height: max(50px, 10%);
 }

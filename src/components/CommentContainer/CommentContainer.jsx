@@ -9,6 +9,8 @@ import {
 } from "../../assets/icons";
 
 export default function CommentContainer(props) {
+  const [clicked, setClick] = useState(false);
+
   // tom array om inga kommentarer, annars får man initala strukturen
   const [blogComments, setBlogComments] = useState(
     props.data.comments ? [] : props.data.comments
@@ -32,11 +34,13 @@ export default function CommentContainer(props) {
     <div className="comments-wrapper">
       {/* passa fuktionen istället för att calla den, om jag skrev utan arrow funktionen skulle den executa direkt när komponenten laddas in */}
       <button
-        onClick={() => props.setClick(!props.clicked)}
+        onClick={() => setClick(!clicked)}
         className="show-comments-btn"
         type="button"
         /* för talsyntes */
         aria-label={`Visa ${blogComments.length} kommentarer`}
+        aria-haspopup="dialog"
+        aria-expanded={clicked}
       >
         <ShowCommentsIcon />
         <span className="comment-number" aria-hidden>
@@ -46,16 +50,13 @@ export default function CommentContainer(props) {
       <aside
         className="comments-main"
         /* true flex false none */
-        style={{ display: props.clicked ? "flex" : "none" }}
+        style={{ display: clicked ? "flex" : "none" }}
         /* gömmer för screen readers när den inte finns */
-        aria-hidden={!props.clicked}
+        aria-hidden={!clicked}
       >
-        <div
-          className="backdrop"
-          onClick={() => props.setClick(!props.clicked)}
-        ></div>
+        <div className="backdrop" onClick={() => setClick(!clicked)}></div>
 
-        <section className="comments-content-container">
+        <section className="comments-content-container" role="dialog">
           <article className="comments-header">
             <CommentsIcon className="comments-title-icon" />
             <h2 className="comments-title">
@@ -64,7 +65,7 @@ export default function CommentContainer(props) {
           </article>
 
           <button
-            onClick={() => props.setClick(!props.clicked)}
+            onClick={() => setClick(!clicked)}
             className="close-comments-btn"
             type="button"
             aria-label="Dölj kommentarer"

@@ -14,12 +14,13 @@ export default function Navbar() {
         <a onClick={() => setClick(!clicked)} href="#intro">
           <h2 className="nav-title">WLOGG</h2>
         </a>
-        <ul className={`nav-links ${clicked ? "nav-active" : "nav-inactive"}`}>
+        <ul
+          // fullscreen nav klass när <500px och öppnad
+          className={`nav-links ${clicked ? "nav-active" : "nav-inactive"}`}
+          onClick={() => setClick(!clicked)}
+        >
           <li>
-            {/* får inte wrappa li enligt WAI */}
-            <a onClick={() => setClick(!clicked)} href="#intro">
-              Hem
-            </a>
+            <a href="#intro">Hem</a>
           </li>
         </ul>
         <button
@@ -27,7 +28,7 @@ export default function Navbar() {
           onClick={() => setClick(!clicked)}
           type="button"
           aria-expanded={clicked}
-          aria-label="Öppna eller stäng navigation meny"
+          aria-label="Toggla navigation menyn"
         >
           {/* aria-hidden för att screen-readers inte ska se ikonen, dom har redan knappen */}
           {clicked ? <span aria-hidden>&times;</span> : <Burger />}

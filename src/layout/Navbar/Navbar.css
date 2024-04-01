@@ -1,11 +1,12 @@
 /* mesta kommenterat i Landing/BlogPost */
 
 .header {
-
     /* Stannar alltid med skroll och påverkar inga andra element */
     position: fixed;
-    /* body padding får den annars att overflowa */
-    width: 98vw;
+    /* längst vänster och höger av viewport, annars förstör body padding */
+    left: 0;
+    right: 0;
+    padding: 0 1vw;
     /* Navbar över allt annat */
     z-index: 99;
 }
@@ -23,17 +24,15 @@
     /* word-break tillåter alltid wrap på nått sätt, white-space nowrap aldrig */
     white-space: nowrap;
     overflow: hidden;
+    margin-right: auto;
 }
 
-.nav-links {
-    /* tar bort ul punkter */
-    list-style: none;
-}
 
 .nav-links li {
-    margin-left: 1vw;
     display: inline-block;
     font-size: max(1.2rem, 1.5vw);
+    /* spacing mellan links men fixar också nån padding overflow bug? */
+
 }
 
 .navbar-toggle {
@@ -72,8 +71,6 @@
         align-items: center;
         justify-content: space-evenly;
         height: 110vh;
-
-
         position: absolute;
         /* bypass body padding men känns dåligt */
         left: -1vw;

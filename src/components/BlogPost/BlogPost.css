@@ -5,44 +5,79 @@
     /* Positioneringsankare */
     position: relative;
     margin-bottom: 15vh;
-    /* max 1920px för widescreens och större skärmar (stretched jobbigt att läsa), min 400px så aldrig för liten tills väggarna krymper */
-    max-width: clamp(400px, 70vw, 1920px);
+    /* max 1500px för widescreens och större skärmar (stretched jobbigt att läsa), min 400px så aldrig för liten tills väggarna krymper */
+    max-width: clamp(400px, 70vw, 1500px);
 }
 
 
 .post-figure {
-    /* grow när det finns space, wrap om 40% är 200px */
-    flex: 0 1 max(300px, 40%);
+    /* post-text-container hanterar wrap */
+    flex: 0 1 30%;
+    /* adjust this value as needed */
     margin-bottom: 10px;
     margin-right: 1%;
 }
 
-.post-figure div {
+.img-container {
     /* 
-    300px minimum, annars 30vw, max 1000px
-
     vw bättre än vh för wide screens och generellt så om vw är mindre vill jag ha mindre höjd
     */
-    max-height: clamp(250px, 25vw, 800px);
-    /* skrolla bilden när den är större än 30vh */
-    overflow-y: scroll;
+    max-height: clamp(100px, 25vw, 600px);
+    /* göm container overflow */
+    overflow-y: hidden;
 }
 
+
+
 .post-figure img {
+    /* set width att vara containers width istället för img(overflow) */
     width: 100%;
 }
+
 
 .post-figure figcaption {
     color: silver;
     font-size: max(0.7rem, 1vw);
 }
 
+.figure-popup {
+    position: fixed;
+    /* vertikal margin fungerar pga top bottom */
+    margin: auto;
+    max-height: max(300px, 70vh);
+    max-width: clamp(300px, 50vw, 1920px);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    /* skrolla bilden när den är större än max-height */
+    overflow-y: scroll;
+}
+
+.figure-backdrop {
+    /* täck hela skärmen */
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.705);
+    z-index: 98;
+}
+
+.figure-popup:hover,
+.figure-backdrop:hover,
+.post-figure img:hover {
+    cursor: pointer;
+}
+
 .post-text-container {
     /* bilden bestämmer min höjden på blogg posten men om det finns mycket text så kommer den att växa pga av detta */
     max-height: 60vh;
-    /* grow när det finns space, wrap om 55% är 200px */
-    flex: 1 max(200px, 55%);
-    margin-left: 10px;
+    /* grow när det finns space, sätt inital storleken 300px/wrap 300px,
+    50% gör inget bara om figure har grow så får den större storlek */
+    flex: 1 max(300px, 50%);
+
     overflow-y: scroll;
     flex-direction: column;
 }
