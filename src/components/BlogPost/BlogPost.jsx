@@ -1,7 +1,7 @@
 import "./BlogPost.css";
 import { useState } from "react";
 
-import CommentContainer from "../CommentContainer/CommentContainer";
+import CommentButton from "../CommentButton/CommentButton";
 
 /* props/properties är alla attributes jag skrev in i elementet så blogData= {data} = props */
 export default function BlogPost(props) {
@@ -44,12 +44,12 @@ export default function BlogPost(props) {
         <p className="post-text">{props.data.text}</p>
       </article>
 
-      <CommentContainer
+      <CommentButton
         data={{
           description: props.data.description,
           comments: props.data.comments,
         }}
-      ></CommentContainer>
+      ></CommentButton>
     </article>
   );
 }

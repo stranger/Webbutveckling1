@@ -1,0 +1,23 @@
+.show-comments-btn {
+    /* */
+    position: absolute;
+    right: 0;
+    border: none;
+    background: none;
+    /* sätter nummret i mitten */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.show-comments-btn svg {
+    width: clamp(30px, 4vw, 150px);
+    height: clamp(30px, 4vw, 150px);
+}
+
+.comment-number {
+    color: white;
+    position: absolute;
+    font-size: clamp(0.7rem, 1vw, 4rem);
+}
