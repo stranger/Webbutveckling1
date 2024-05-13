@@ -10,12 +10,9 @@ export default function BlogContainer() {
       <h2 className="blog-title">BLOGGEN</h2>
       {/* Fadar in när den visas i viewport */}
       <Fade className="fade" cascade triggerOnce damping={0.01}>
-        {/* Itererar över posts arrayen. Data är objekten i arrayen, key är index
-        som react behöver för att hålla koll på vilket element är vad så att den
-        kan re - rendera bara den komponenten istället för alla blog posts, m.m */}
-        {blogData.posts.map((data, key) => {
+        {blogData.posts.map((data) => {
           /* skickar data till komponenten (props/properties) */
-          return <BlogPost data={data} key={key}></BlogPost>;
+          return <BlogPost data={data} key={data.id}></BlogPost>;
         })}
       </Fade>
     </section>

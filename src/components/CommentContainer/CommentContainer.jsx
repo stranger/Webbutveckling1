@@ -50,10 +50,9 @@ export default function CommentContainer(props) {
         <hr />
 
         <article className="comments">
-          {/* Map förklarad i Landing.jsx */}
-          {props.comments.map((comment, key) => {
+          {props.comments.map((comment) => {
             return (
-              <div key={key} className="comment">
+              <div key={comment.id} className="comment">
                 <h3 className="comment-username">{comment.user}:</h3>
                 <p className="comment-text">{comment.text}</p>
                 <hr />
